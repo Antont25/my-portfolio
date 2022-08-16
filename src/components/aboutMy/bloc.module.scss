@@ -1,0 +1,44 @@
+@import "src/common/style/scss/variable";
+
+.myBloc {
+  background-color: $primary-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  .aboutMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: 732px) {
+      flex-direction: column;
+    }
+  }
+
+  .img {
+    z-index: 5;
+
+    & img {
+      height: 380px;
+      max-width: 340px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .info {
+    margin-left: 50px;
+
+
+    @media (max-width: 732px) {
+      margin-left: 0;
+      order: 1;
+    }
+  }
+}
+
+
+
+
