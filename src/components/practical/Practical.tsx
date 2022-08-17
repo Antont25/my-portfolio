@@ -2,6 +2,10 @@ import React, {useCallback} from 'react';
 import {loadFull} from 'tsparticles';
 import style from './practical.module.scss'
 import Particles from 'react-tsparticles';
+import react from '../../assets/svg/react-2.svg'
+import js from '../../assets/svg/logo-javascript.svg'
+import redux from '../../assets/svg/redux.svg'
+import ts from '../../assets/svg/typescript-2.svg'
 
 export const Practical = () => {
     const particlesInit = useCallback(async (engine: any) => {
@@ -37,10 +41,7 @@ export const Practical = () => {
                                 enable: true,
                                 mode: 'push',
                             },
-                            onHover: {
-                                enable: true,
-                                mode: 'attract',
-                            },
+
                             resize: true,
                         },
                         modes: {
@@ -53,47 +54,63 @@ export const Practical = () => {
                             },
                         },
                     },
-                    particles: {
-                        color: {
-                            value: '#ffffff',
+                    'particles': {
+                        'number': {
+                            'value': 10,
+                            'density': {
+                                'enable': true,
+                                'value_area': 800
+                            }
                         },
-                        links: {
-                            color: '#ffffff',
-                            distance: 150,
+
+                        'move': {
                             enable: true,
-                            opacity: 0.5,
-                            width: 1,
+                            'speed': 0.1,
+                            'out_mode': 'out'
                         },
-                        collisions: {
-                            enable: true,
+                        'shape': {
+                            'type': [
+                                'image',
+
+                            ],
+                            'image': [
+                                {
+                                    'src': react,
+                                    'height': 20,
+                                    'width': 20,
+                                },
+                                {
+                                    'src': ts,
+                                    'height': 20,
+                                    'width': 20,
+                                },
+                                {
+                                    'src': js,
+                                    'height': 20,
+                                    'width': 20
+                                },
+                                {
+                                    'src': redux,
+                                    'height': 20,
+                                    'width': 20,
+                                }
+                            ]
                         },
-                        move: {
-                            direction: 'none',
-                            enable: true,
-                            outModes: {
-                                default: 'bounce',
-                            },
-                            random: false,
-                            speed: 1.5,
-                            straight: false,
+                        'color': {
+                            'value': '#c7aeae'
                         },
-                        number: {
-                            density: {
-                                enable: true,
-                                area: 800,
-                            },
-                            value: 80,
-                        },
-                        opacity: {
-                            value: 0.5,
-                        },
-                        shape: {
-                            type: 'circle',
-                        },
-                        size: {
-                            value: {min: 1, max: 5},
-                        },
+                        'size': {
+                            'value': 10,
+                            'random': false,
+                            'anim': {
+                                'enable': true,
+                                'speed': 2,
+                                'size_min': 7,
+                                'sync': true
+                            }
+                        }
                     },
+                    'retina_detect': false,
                     detectRetina: true,
                 }}
                 canvasClassName={style.canvasPracticals}

@@ -1,7 +1,25 @@
 @import "./src/common/style/scss/variable";
 
-.item {
-  color: $color-text
+.footerBloc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .icons {
+    max-width: 130px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .text {
+    color: $color-text;
+    font-size: 0.7rem;
+    text-align: center;
+    margin: 20px 0;
+  }
 }
+
+
 
 

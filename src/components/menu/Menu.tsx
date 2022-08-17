@@ -18,7 +18,7 @@ export const Menu = () => {
                 <li className={style.item}>
                     <NavLink to={'/about'} className={setActive}>
                         <span className={style.icon}><i className="lnr lnr-user"/></span>
-                        ABOUT MY
+                        ABOUT ME
                     </NavLink>
                 </li>
                 <li className={style.item}>

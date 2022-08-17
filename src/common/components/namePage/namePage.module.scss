@@ -1,0 +1,12 @@
+@import "../../style/scss/variable";
+@import "../../style/mixin/mixin";
+
+.block {
+  color: $second-color;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, .2);
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  @include flex(space-between);
+}

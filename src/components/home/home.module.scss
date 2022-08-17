@@ -1,0 +1,49 @@
+@import "src/common/style/scss/variable";
+
+.homeBlock {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  background-image: url("../../assets/img/Depositphotos_333149958_L.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $primary-color;
+    opacity: .5;
+  }
+
+  .name {
+    color: #fff;
+    z-index: 10;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+
+    span {
+      color: $second-color;
+    }
+  }
+
+  .typingText {
+    color: #fff;
+    z-index: 10;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+}
+
+
+
+

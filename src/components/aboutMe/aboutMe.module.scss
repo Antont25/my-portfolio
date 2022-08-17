@@ -1,0 +1,49 @@
+@import "../../common/style/scss/variable";
+@import "../../common/style/mixin/mixin";
+
+.about {
+  @include flex(space-between);
+
+  .textBox {
+    font-size: 16px;
+    line-height: 1.65;
+    color: $color-text-page;
+    margin-right: 20px;
+    max-width: 750px;
+  }
+
+  .title {
+    border-bottom: 2px solid $second-color;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+    padding-bottom: 1px;
+    color: $color-text-page;
+
+    &:before {
+      content: ':';
+      position: absolute;
+      top: 0;
+      right: -10px;
+    }
+  }
+
+  .aboutInfo {
+    width: 350px;
+    white-space: nowrap;
+
+    & ul li {
+      margin-bottom: 20px;
+    }
+
+    .value {
+      font-family: 'Playfair Display', serif;
+      color: $color-text-page;
+    }
+  }
+
+}
