@@ -2,6 +2,7 @@ import React from 'react';
 import style from './home.module.scss'
 import {Practical} from '../practical/Practical';
 import ReactTypingEffect from 'react-typing-effect';
+import '../../App.scss'
 
 export const Home = () => {
     return (
@@ -14,6 +15,7 @@ export const Home = () => {
             />
             <Practical/>
         </div>
+
     );
 };
 

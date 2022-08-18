@@ -1,0 +1,77 @@
+@import "../../common/style/scss/variable";
+@import "../../common/style/mixin/mixin";
+
+.servicesBlock {
+  margin-top: 70px;
+
+  & h2 {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1em;
+    letter-spacing: .5px;
+
+
+  }
+
+  .servicesCard {
+    @include flex(space-between);
+
+
+    .cardsItem {
+      @include flex(space-between, column);
+      max-width: 360px;
+      padding: 0 30px;
+
+
+      .icon {
+        font-size: 50px;
+        margin-bottom: 10px;
+        line-height: 1rem;
+        color: $second-color;
+      }
+
+      & h3 {
+        font-size: 1.2rem;
+        font-family: "Playfair Display", serif;
+        text-align: center;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 576px) {
+          height: initial;
+        }
+      }
+
+      & span {
+        font-size: 0.8rem;
+        line-height: 22px;
+        text-align: center;
+        font-weight: 500;
+        @media (max-width: 576px) {
+          padding: 0 50px;
+        }
+      }
+
+      @media (max-width: 986px) {
+        flex: 0 0 38%;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 576px) {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 986px) {
+      flex-wrap: wrap;
+      flex: 0 0 40%;
+    }
+    @media (max-width: 576px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+

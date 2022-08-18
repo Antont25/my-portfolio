@@ -3,11 +3,11 @@
 
 body {
   font-family: 'Roboto Serif', serif;
-
 }
 
 .app {
   display: flex;
+  overflow: hidden;
 }
 
 ul {
@@ -24,37 +24,6 @@ a {
 
 }
 
-.navContainer {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #17181b;
-  max-width: 200px;
-
-  .imgBlock {
-    max-width: 200px;
-    width: 100%;
-    background-color: #3f4144;
-    object-fit: cover;
-    max-height: 200px;
-    position: relative;
-
-    .name {
-      color: #ffffff;
-      position: absolute;
-      bottom: 0px;
-      white-space: nowrap;
-      width: 100%;
-      text-align: center;
-      padding: 5px 0;
-      background-color: $second-color;
-
-      opacity: .8;
-      text-shadow: 0 2px 10px rgb(0 0 0 / 50%);
-      font-size: 1rem
-    }
-  }
-}
 
 .fa-brands {
   background-color: $color-text;
@@ -71,21 +40,60 @@ a {
   background-color: $primary-color;
   width: 100%;
   min-height: 100vh;
+  margin-left: 200px;
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 
 .container {
   max-width: 1440px;
   width: 89%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 70px 20px 50px 20px;
   margin: 0 auto;
+  color: $color-text-page;
 }
 
 .headerText {
+  margin-top: 0;
   font-size: 2rem;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
   color: #fff;
+  white-space: nowrap;
+}
+
+.bodyText {
+  font-size: 1.2rem;
+  line-height: 35px;
+}
+
+.subheading {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px;
+  border-bottom: 2px solid $second-color;
+
+
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 2px;
+    height: 6px;
+    border-bottom: 6px solid $second-color;
+    bottom: 0;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    width: 2px;
+    height: 6px;
+    border-bottom: 6px solid $second-color;
+    bottom: 0;
+  }
 }
 
 

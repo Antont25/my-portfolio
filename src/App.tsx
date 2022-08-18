@@ -2,13 +2,17 @@ import React from 'react';
 import './App.scss';
 
 import {WhichRouters} from './components/whichRouters/WhichRouters';
-import {NavContainer} from './pages/NavContainer';
+import {Header} from './components/header/Header';
 
 export const App = () => {
     return (
         <div className={'app'}>
-            <NavContainer/>
-            <WhichRouters/>
+            <header>
+                <Header/>
+            </header>
+            <main className={'wrapper'}>
+                <WhichRouters/>
+            </main>
         </div>
     );
 }
