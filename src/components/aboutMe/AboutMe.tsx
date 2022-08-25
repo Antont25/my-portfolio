@@ -3,6 +3,7 @@ import '../../App.scss'
 import {NamePage} from '../../common/components/namePage/NamePage';
 import style from './aboutMe.module.scss'
 import {Services} from '../services/Services';
+import 'animate.css';
 
 
 export const AboutMe = () => {

@@ -15,7 +15,6 @@ export const Header = () => {
                     ANTON TOLKACHOV
                 </div>
             </div>
-
             <Menu/>
             <Footer/>
         </div>
