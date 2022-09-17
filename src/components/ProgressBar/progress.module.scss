@@ -17,11 +17,12 @@
     position: relative;
     background-color: $second-color;
     border-radius: inherit;
-    transition: width 1s ease-in-out;
+    transition: width 2s ease-in-out;
 
     &:after {
       content: "";
       display: block;
+      animation-duration: 5s;
       border: 10px solid transparent;
       border-bottom: 18px solid $second-color;
       position: absolute;

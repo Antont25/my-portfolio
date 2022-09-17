@@ -5,14 +5,18 @@ export const Servicec = (props: ServicecType) => {
     return (
         <div className={style.cardsItem}>
             <div className={style.icon}>
-                <i aria-hidden="true" className="lnr lnr lnr lnr-laptop"/>
+                <i aria-hidden="true" className={props.icon}/>
             </div>
 
-            <h3>{props.text}</h3>
-            <span>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut</span>
+            <h3>{props.title}</h3>
+            <span>
+                {props.children}
+            </span>
         </div>
     )
 }
 type ServicecType = {
-    text: string
+    title: string
+    children: React.ReactNode
+    icon: string
 }

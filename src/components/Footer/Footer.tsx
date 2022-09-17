@@ -8,23 +8,23 @@ export const Footer = () => {
 
             <div className={style.icons}>
                 <span>
-                    <a href="">
+                    <a href="https://github.com/Antont25" target="_blank">
                          <i className="fa-brands fa-github  "/>
                     </a>
                 </span>
                 <span>
-                    <a href="">
+                    <a href="https://www.codewars.com/users/toxa123439" target="_blank">
                          <i className="fa-brands fa-dribbble"/>
                     </a>
                 </span>
                 <span>
-                    <a href="">
+                    <a href="https://t.me/antontolkachovdev" target="_blank">
                           <i className="fa-brands fa-telegram"/>
                     </a>
                 </span>
                 <span>
-                    <a href="">
-                         <i className="fa-brands fa-github"/>
+                    <a href="https://www.linkedin.com/in/anton-tolkachov-dev/" target="_blank">
+                         <i className="fa-brands fa-linkedin-in"/>
                     </a>
                 </span>
 

@@ -16,11 +16,11 @@
   }
 
   .servicesCard {
-    @include flex(space-between);
+    @include flex(center, row, flex-start);
 
 
     .cardsItem {
-      @include flex(space-between, column);
+      @include flex(space-between, column,);
       max-width: 360px;
       padding: 0 30px;
 
