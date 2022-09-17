@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
 
-import {WhichRouters} from './components/whichRouters/WhichRouters';
-import {Header} from './components/header/Header';
+import {WhichRouters} from './common/WhichRouters/WhichRouters';
+import {Header} from './components/Header/Header';
 
 export const App = () => {
     return (

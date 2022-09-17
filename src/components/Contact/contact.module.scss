@@ -1,0 +1,70 @@
+@import "../../common/style/scss/variable";
+
+.contacts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .formBloc {
+    max-width: 600px;
+    width: 100%;
+    margin: 50px 0;
+
+    .form {
+      display: flex;
+      height: calc(100% - 60px);
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+
+      .inputBloc {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        width: 100%;
+
+
+        & input {
+          max-width: 250px;
+          width: 100%;
+        }
+
+        & > input:nth-child(2) {
+          margin-left: 20px
+        }
+      }
+
+      & textarea {
+        resize: none;
+        height: 150px;
+      }
+
+      & input, textarea {
+
+        background-color: transparent;
+        line-height: 1.5;
+        color: $color-text-page;
+        padding: 5px 10px;
+        -webkit-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all .5s ease;
+        position: relative;
+        z-index: 1;
+        border: 3px solid $color-text;
+        outline: none;
+
+
+        &:focus {
+          border-color: $color-text-hover;
+        }
+      }
+    }
+  }
+}
+
+.contactsIcon {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+

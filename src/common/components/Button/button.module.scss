@@ -1,0 +1,50 @@
+@import "../../style/scss/variable";
+
+.btn {
+  border: 3px solid $second-color;
+  margin: 50px auto 0 auto;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: transparent;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  line-height: 100%;
+  letter-spacing: 1px;
+  overflow: hidden;
+  color: $second-color;
+  //max-width: 160px;
+  width: 100%;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 35%;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: -1;
+    border: 2px;
+    background-color: $second-color;
+  }
+
+  &:hover {
+    color: $color-text-hover;
+    background-color: $second-color;
+
+    &:after {
+      opacity: 1;
+      left: 0px;
+      width: 100%;
+      background-color: $second-color;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../common/style/scss/variable";
+
+.containerStyles {
+  height: 10px;
+  width: 80%;
+  margin: 40px 0 20px 0;
+  display: flex;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  overflow: visible;
+  background-color: #404144;
+
+
+  .fillerStyles {
+    height: 100%;
+    position: relative;
+    background-color: $second-color;
+    border-radius: inherit;
+    transition: width 1s ease-in-out;
+
+    &:after {
+      content: "";
+      display: block;
+      border: 10px solid transparent;
+      border-bottom: 18px solid $second-color;
+      position: absolute;
+      top: -18px;
+      right: -12px;
+    }
+
+    .labelStyles {
+      display: block;
+      padding: 5px;
+      font-weight: bold;
+      position: absolute;
+      top: -40px;
+      right: -25px;
+      color: #fff;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,103 @@
+@import "../../common/style/scss/variable";
+
+.myPortfolioBloc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .portfolioItems {
+    padding: 20px 10px;
+    flex: 1 0 28%;
+    display: flex;
+    max-width: 450px;
+    min-width: 300px;
+
+
+    h3 {
+      display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .imgBloc:after {
+        transform: translate(0, 0px);
+        background-color: $second-color;
+        opacity: 0.8;
+      }
+
+      h3 {
+        z-index: 10;
+        display: block;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: $color-text-page;
+        animation: showLeft 1s;
+      }
+
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    @media (min-width: 1567px) {
+      margin: 50px 20px;
+    }
+
+  }
+
+  .imgBloc {
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+
+    & img {
+      object-position: 50% 50%;
+      border-radius: 20px;
+      height: 300px;
+      transform: scale(1);
+      width: 100%;
+      transition: all 1s ease-in-out;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: auto;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      transform: translate(0, -500px);
+      animation-duration: 0.2s;
+      transition: all 0.7s ease-in-out;
+      border-radius: 19px;
+    }
+  }
+}
+
+
+@keyframes showLeft {
+
+  from {
+    left: -30%;
+    opacity: 0;
+  }
+
+  to {
+    left: 50%;
+    opacity: 1;
+  }
+
+}
+
+
