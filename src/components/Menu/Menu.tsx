@@ -2,43 +2,41 @@ import React from 'react';
 import style from './menu.module.scss'
 import {NavLink} from 'react-router-dom';
 
-export const Menu = () => {
-    const setActive = ({isActive}: any) => isActive ? style.isActive : ''
+
+export const Menu = (props: MenuType) => {
     return (
         <div className={style.menuBloc}>
             <ul className={style.items}>
-                <li className={style.item}>
-                    <NavLink to={'/'} className={setActive}>
-                    <span className={style.icon}>
-                        <i className="lnr lnr-home"/>
-                    </span>
-                        HOME
-                    </NavLink>
-                </li>
-                <li className={style.item}>
-                    <NavLink to={'/about'} className={setActive}>
-                        <span className={style.icon}><i className="lnr lnr-user"/></span>
-                        ABOUT ME
-                    </NavLink>
-                </li>
-                <li className={style.item}>
-                    <NavLink to={'/skills'} className={setActive}>
-                        <span className={style.icon}><i className="lnr lnr-cog"/></span>
-                        SKILLS
-                    </NavLink></li>
-                <li className={style.item}>
-                    <NavLink to={'/Portfolio'} className={setActive}>
-                        <span className={style.icon}><i className="lnr lnr-briefcase"/></span>
-                        PORTFOLIO
-                    </NavLink>
-                </li>
-                <li className={style.item}>
-                    <NavLink to={'/contact'} className={setActive}>
-                        <span className={style.icon}><i className="lnr lnr-envelope"/></span>
-                        CONTACT
-                    </NavLink>
-                </li>
+                <Item title={'HOME'} to={'/'} classNameIcon={'lnr lnr-home'} setIsOpen={props.setIsOpen}/>
+                <Item title={'ABOUT ME'} to={'/about'} classNameIcon={'lnr lnr-user'} setIsOpen={props.setIsOpen}/>
+                <Item title={'SKILLS'} to={'/skills'} classNameIcon={'lnr lnr-cog'} setIsOpen={props.setIsOpen}/>
+                <Item title={'PORTFOLIO'} to={'/Portfolio'} classNameIcon={'lnr lnr-briefcase'}
+                      setIsOpen={props.setIsOpen}/>
+                <Item title={'CONTACT'} to={'/contact'} classNameIcon={'lnr lnr-envelope'} setIsOpen={props.setIsOpen}/>
             </ul>
         </div>
     );
 }
+
+const Item = (props: ItemType) => {
+    const setActive = ({isActive}: any) => isActive ? style.isActive : ''
+
+    return (
+        <li className={style.item} onClick={props.setIsOpen}>
+            <NavLink to={props.to} className={setActive}>
+                <span className={style.icon}><i className={props.classNameIcon}/></span>
+                {props.title}
+            </NavLink>
+        </li>
+    )
+}
+//type
+type ItemType = {
+    to: string
+    classNameIcon: string
+    title: string
+    setIsOpen?: () => void
+}
+type MenuType = {
+    setIsOpen?: () => void
+};

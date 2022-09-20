@@ -5,7 +5,8 @@ export const Button = (props: ButtonType) => {
     return (
         <button type={props.type}
                 className={style.btn}
-                onClick={props.callback}>
+                onClick={props.callback}
+                disabled={props.disabled}>
             {props.name}
         </button>
     );
@@ -14,6 +15,7 @@ export const Button = (props: ButtonType) => {
 type ButtonType = {
     type: 'button' | 'submit' | 'reset' | undefined
     name: string
-    callback: () => void
+    disabled?: boolean
+    callback?: () => void
 }
 

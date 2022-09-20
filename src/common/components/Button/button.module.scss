@@ -17,8 +17,8 @@
   letter-spacing: 1px;
   overflow: hidden;
   color: $second-color;
-  //max-width: 160px;
   width: 100%;
+
 
   &:after {
     position: absolute;
@@ -46,5 +46,23 @@
       width: 100%;
       background-color: $second-color;
     }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    color: $color-text;
+    opacity: 0.6;
+  }
+
+  &:disabled:hover {
+    cursor: not-allowed;
+    color: $color-text;
+    opacity: 0.6;
+  }
+
+  &:disabled:hover:after {
+    transition: none;
+    
   }
 }

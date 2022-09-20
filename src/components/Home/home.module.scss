@@ -24,22 +24,30 @@
   }
 
   .name {
-    color: #fff;
+    color: $color-text-hover;
     z-index: 10;
     font-size: 3rem;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    margin-top: 80px;
 
     span {
       color: $second-color;
     }
   }
 
+  .staticText {
+    color: $color-text-hover;
+    z-index: 10;
+    font-size: 1.2rem;
+  }
+
   .typingText {
-    color: #fff;
+    color: $color-text-hover;
     z-index: 10;
     font-size: 1.5rem;
     font-weight: 500;
+    border-bottom: 2px solid $second-color;
   }
 
 }

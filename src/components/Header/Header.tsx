@@ -5,7 +5,8 @@ import {Menu} from '../Menu/Menu';
 import {Footer} from '../Footer/Footer';
 import style from './header.module.scss'
 
-export const Header = () => {
+
+export const Header = (props: HeaderParams) => {
 
     return (
         <div className={style.navContainer}>
@@ -15,8 +16,12 @@ export const Header = () => {
                     ANTON TOLKACHOV
                 </div>
             </div>
-            <Menu/>
+            <Menu setIsOpen={props.setIsOpen}/>
             <Footer/>
         </div>
     );
+};
+//type
+type HeaderParams = {
+    setIsOpen?: () => void
 };

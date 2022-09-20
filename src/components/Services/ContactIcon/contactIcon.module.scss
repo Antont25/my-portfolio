@@ -6,15 +6,22 @@
   flex-direction: column;
   align-items: center;
 
+
   &:nth-child(2) {
     margin: 0 20px;
   }
 
   .icon {
-    font-size: 1.9rem;
+    a {
+      font-size: 1.9rem;
+      color: $second-color;
+      width: 30px;
+      margin: 0 auto;
+    }
+  }
+
+  .hoverItem:hover ~ h5 {
     color: $second-color;
-    width: 30px;
-    margin: 0 auto;
   }
 
   h5 {

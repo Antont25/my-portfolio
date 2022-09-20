@@ -5,20 +5,21 @@ import style from './aboutMe.module.scss'
 import {Services} from '../Services/Services';
 import 'animate.css';
 import {Button} from '../../common/components/Button/Button';
+import axios from 'axios';
 
 export const AboutMe = () => {
 
-    const uploadHandler = () => {
+    const uploadHandler = async () => {
+        const res = await axios.get('resume.pdf', {responseType: 'blob'})
+        const blob = new Blob([res.data], {type: 'application / pdf'});
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'Anton-cv.pdf';
+        alink.click();
+        alink.remove()
 
-        fetch('cv.pdf').then(response => {
-            response.blob().then(blob => {
-                const fileURL = window.URL.createObjectURL(blob);
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'Anton-cv.pdf';
-                alink.click();
-            })
-        })
+
     }
 
     return (

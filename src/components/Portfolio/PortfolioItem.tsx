@@ -1,16 +1,24 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import style from './portfolio.module.scss'
 
 type PortfolioItemParams = {
     img: string
+    href: string
+    title: string
+    whatProject: string
+    children: ReactNode
 };
 export const PortfolioItem = (props: PortfolioItemParams) => {
     return (
         <div className={style.portfolioItems}>
-            <div className={style.imgBloc}>
+            <a className={style.imgBloc} href={props.href} target="_blank">
                 <img src={props.img} alt={props.img}/>
-                <h3> названия</h3>
-            </div>
+                <div className={style.infoBlock}>
+                    <h3> {props.title}</h3>
+                    <span>{props.whatProject}</span>
+                    <p>{props.children}</p>
+                </div>
+            </a>
         </div>
     );
 };

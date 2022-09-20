@@ -13,7 +13,7 @@
     min-width: 300px;
 
 
-    h3 {
+    .infoBlock {
       display: none;
     }
 
@@ -26,11 +26,12 @@
         opacity: 0.8;
       }
 
-      h3 {
+      .infoBlock {
+        font-weight: 600;
+        font-size: 1.4rem;
         z-index: 10;
-        display: block;
-        margin: auto;
         position: absolute;
+        width: 100%;
         top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
@@ -38,7 +39,19 @@
         transform: translate(-50%, -50%);
         color: $color-text-page;
         animation: showLeft 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+          text-align: center;
+          width: 90%;
+          font-size: 1rem;
+          line-height: 1.25;
+          font-weight: 500;
+        }
       }
+
 
       img {
         transform: scale(1.2);
