@@ -1,13 +1,12 @@
 import React from 'react';
-import '../../App.scss'
+import '../../app/App.scss'
 import ava from '../../assets/img/my-ava.png'
-import {Menu} from '../Menu/Menu';
+import {Menu} from '../../common/components/Menu/Menu';
 import {Footer} from '../Footer/Footer';
 import style from './header.module.scss'
 
 
 export const Header = (props: HeaderParams) => {
-
     return (
         <div className={style.navContainer}>
             <div className={style.imgBlock}>

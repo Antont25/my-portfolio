@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './portfolio.module.scss'
 import {PortfolioItem} from './PortfolioItem';
-import '../../App.scss'
+import '../../app/App.scss'
 import {NamePage} from '../../common/components/NamePage/NamePage';
 import cards from '../../assets/img/cards.jpg'
 import film from '../../assets/img/film.jpg'

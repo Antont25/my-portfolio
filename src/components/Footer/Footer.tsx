@@ -1,11 +1,10 @@
 import React from 'react';
 import style from './footer.module.scss'
-import '../../App.scss'
+import '../../app/App.scss'
 
 export const Footer = () => {
     return (
         <div className={style.footerBloc}>
-
             <div className={style.icons}>
                 <span>
                     <a href="https://github.com/Antont25" target="_blank">

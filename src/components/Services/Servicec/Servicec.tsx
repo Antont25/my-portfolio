@@ -7,7 +7,6 @@ export const Servicec = (props: ServicecType) => {
             <div className={style.icon}>
                 <i aria-hidden="true" className={props.icon}/>
             </div>
-
             <h3>{props.title}</h3>
             <span>
                 {props.children}
@@ -15,6 +14,7 @@ export const Servicec = (props: ServicecType) => {
         </div>
     )
 }
+//type
 type ServicecType = {
     title: string
     children: React.ReactNode

@@ -1,9 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 import style from './progress.module.scss'
 
-type ProgressType = {
-    progress: number
-}
 
 export const Progress: FC<ProgressType> = (props) => {
     const [progress, setProgress] = useState(0)
@@ -12,7 +9,7 @@ export const Progress: FC<ProgressType> = (props) => {
         const timeout = setTimeout(() => {
             setProgress(props.progress)
         }, 500)
-        
+
         return () => clearTimeout(timeout)
     }, [props.progress])
 
@@ -27,6 +24,10 @@ export const Progress: FC<ProgressType> = (props) => {
         </div>
     );
 };
+//type
+type ProgressType = {
+    progress: number
+}
 
 
 

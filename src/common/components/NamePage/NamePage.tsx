@@ -14,9 +14,7 @@ export const NamePage = (props: NamePageType) => {
         </div>
     );
 };
-
 //type
-
 type NamePageType = {
     name: string
     icon: string

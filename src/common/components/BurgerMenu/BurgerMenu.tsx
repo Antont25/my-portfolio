@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {slide as Menu} from 'react-burger-menu';
 import './burgerMenu.css'
-import {Header} from '../Header/Header';
+import {Header} from '../../../components/Header/Header';
 
 
 export const BurgerMenu = (props: any) => {

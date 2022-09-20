@@ -1,13 +1,6 @@
 import React, {ReactNode} from 'react';
 import style from './portfolio.module.scss'
 
-type PortfolioItemParams = {
-    img: string
-    href: string
-    title: string
-    whatProject: string
-    children: ReactNode
-};
 export const PortfolioItem = (props: PortfolioItemParams) => {
     return (
         <div className={style.portfolioItems}>
@@ -22,4 +15,11 @@ export const PortfolioItem = (props: PortfolioItemParams) => {
         </div>
     );
 };
-
+//type
+type PortfolioItemParams = {
+    img: string
+    href: string
+    title: string
+    whatProject: string
+    children: ReactNode
+};

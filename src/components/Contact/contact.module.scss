@@ -69,14 +69,32 @@
       text-align: center;
       padding: 10px;
     }
+
+    .loading {
+      margin: 0 auto;
+
+      svg path:nth-child(1) {
+        fill: #bdd715;
+      }
+
+      svg path:nth-child(2) {
+        fill: #7ee511;
+      }
+
+      svg path:nth-child(3) {
+        fill: #0edc18;
+      }
+
+      svg path:nth-child(4) {
+        fill: #04f50f;
+      }
+    }
   }
 }
 
 .contactsIcon {
   display: flex;
   justify-content: space-evenly;
-
-
 }
 
 

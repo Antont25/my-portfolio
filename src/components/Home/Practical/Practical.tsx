@@ -2,10 +2,10 @@ import React, {useCallback} from 'react';
 import {loadFull} from 'tsparticles';
 import style from './practical.module.scss'
 import Particles from 'react-tsparticles';
-import react from '../../assets/svg/react-2.svg'
-import js from '../../assets/svg/logo-javascript.svg'
-import redux from '../../assets/svg/redux.svg'
-import ts from '../../assets/svg/typescript-2.svg'
+import react from '../../../assets/svg/react-2.svg'
+import js from '../../../assets/svg/logo-javascript.svg'
+import redux from '../../../assets/svg/redux.svg'
+import ts from '../../../assets/svg/typescript-2.svg'
 
 export const Practical = () => {
     const particlesInit = useCallback(async (engine: any) => {
@@ -15,12 +15,11 @@ export const Practical = () => {
     const particlesLoaded = useCallback(async (container: any | undefined) => {
         await console.log(container)
     }, []);
+
     return (
         <div className={style.practical}>
             <Particles
-
                 id="tsparticles"
-
                 init={particlesInit}
                 loaded={particlesLoaded}
                 options={{
@@ -109,7 +108,6 @@ export const Practical = () => {
                     detectRetina: true,
                 }}
                 canvasClassName={style.canvasPracticals}
-
             />
         </div>
 

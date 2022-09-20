@@ -1,13 +1,7 @@
 import React, {FC, ReactNode} from 'react';
 import style from './skills.module.scss'
-import {Progress} from '../ProgressBar/Progress';
+import {Progress} from './ProgressBar/Progress';
 
-type SkillType = {
-    progress: number
-    title: string
-    img?: string
-    children: ReactNode
-}
 
 export const Skill: FC<SkillType> = (props) => {
     return (
@@ -23,4 +17,11 @@ export const Skill: FC<SkillType> = (props) => {
         </div>
     );
 };
+//type
+type SkillType = {
+    progress: number
+    title: string
+    img?: string
+    children: ReactNode
+}
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './services.module.scss'
-import '../../App.scss'
+import '../../app/App.scss'
 import {Servicec} from './Servicec/Servicec';
 
 export const Services = () => {
@@ -25,7 +25,6 @@ export const Services = () => {
                     various devices connected to the Internet, and dynamically adjusts to the specified size of the
                     browser window.
                 </Servicec>
-                {/*<Servicec title={'Web  '}>ss</Servicec>*/}
             </div>
         </div>
     );

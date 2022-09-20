@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../App.scss'
+import '../../app/App.scss'
 import {NamePage} from '../../common/components/NamePage/NamePage';
 import style from './aboutMe.module.scss'
 import {Services} from '../Services/Services';
@@ -18,8 +18,6 @@ export const AboutMe = () => {
         alink.download = 'Anton-cv.pdf';
         alink.click();
         alink.remove()
-
-
     }
 
     return (
@@ -61,8 +59,7 @@ export const AboutMe = () => {
                     <div className={style.btn}>
                         <Button type={'button'}
                                 name={'Download Resume'}
-                                callback={uploadHandler}
-                        />
+                                callback={uploadHandler}/>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,12 @@
-import React, {ChangeEvent, FormEvent, useEffect, useRef, useState} from 'react';
+import React, {ChangeEvent, FormEvent, useEffect, useState} from 'react';
 import {NamePage} from '../../common/components/NamePage/NamePage';
-import '../../App.scss'
+import '../../app/App.scss'
 import style from './contact.module.scss'
 import {Button} from '../../common/components/Button/Button';
 import {ContactIcon} from '../Services/ContactIcon/ContactIcon';
 import axios from 'axios';
+import ReactLoading from 'react-loading';
+
 
 export const Contact = () => {
     const [name, setName] = useState('')
@@ -15,13 +17,6 @@ export const Contact = () => {
     const [errors, setErrors] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        const idTimeout = setTimeout(() => {
-            setModalIsOpen(false)
-        }, 5000)
-
-        return () => clearTimeout(idTimeout)
-    }, [isModalOpen])
 
     const submitHandler = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -45,9 +40,7 @@ export const Contact = () => {
         } else {
             setErrors(true)
         }
-
     }
-
 
     const onChangeNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
         errors && setErrors(false)
@@ -62,18 +55,21 @@ export const Contact = () => {
         setMessage(e.currentTarget.value)
     }
 
+    useEffect(() => {
+        const idTimeout = setTimeout(() => {
+            setModalIsOpen(false)
+        }, 5000)
+
+        return () => clearTimeout(idTimeout)
+    }, [isModalOpen])
+
     const classError = errors ? style.error : undefined
     return (
         <div className={'container'}>
-
-
             <NamePage name={'Contact.'} icon={'lnr lnr-envelope'}/>
-
             <div className={style.contacts}>
                 <h2><span className={'subheading'}>LET'S TALK</span></h2>
-
                 <div className={style.formBloc}>
-
                     <form className={style.form} onSubmit={submitHandler}>
                         <div className={style.inputBloc}>
                             <input type="text"
@@ -92,15 +88,17 @@ export const Contact = () => {
                                   placeholder="Type the message here"
                                   onChange={onChangeMessageHandler}
                                   className={classError}/>
-
                         <div style={{width: '160px', margin: '0 auto'}}>
                             <Button type={'submit'} name={'SEND'} disabled={loading || errors}/>
                         </div>
                     </form>
+                    {loading && <ReactLoading type={'balls'}
+                                              height={10}
+                                              width={56}
+                                              className={style.loading}/>}
                     {isModalOpen &&
                         <div className={style.successfullySubmit}>Thank you, I will contact you shortly.</div>}
                 </div>
-
             </div>
             <div className={style.contactsIcon}>
                 <ContactIcon text={'AntonTolkachovDev'}

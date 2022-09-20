@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './home.module.scss'
-import {Practical} from '../Practical/Practical';
+import {Practical} from './Practical/Practical';
 import ReactTypingEffect from 'react-typing-effect';
-import '../../App.scss'
+import '../../app/App.scss'
 import 'animate.css';
 
 

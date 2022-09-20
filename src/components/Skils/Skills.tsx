@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './skills.module.scss'
 import {Skill} from './Skill';
-import '../../App.scss'
+import '../../app/App.scss'
 import {NamePage} from '../../common/components/NamePage/NamePage';
 import js from '../../assets/svg/javascript.svg'
 import ts from '../../assets/svg/typescript.svg'
@@ -12,8 +12,6 @@ import css from '../../assets/svg/css-3.svg'
 
 
 export const Skills = () => {
-
-
     return (
         <div className={'container'}>
             <NamePage name={'Skills.'} icon={'lnr lnr-cog'}/>
