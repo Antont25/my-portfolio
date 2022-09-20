@@ -25,7 +25,6 @@
 
 .header_mobile h2 {
     color: #fff;
-    font-size: 24px;
     text-transform: uppercase;
     line-height: 50px;
     white-space: nowrap;
@@ -34,6 +33,7 @@
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 0;
+    font-size: 1.2rem;
 }
 
 .wrap-burger {
@@ -81,8 +81,16 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-    height: 24px;
-    width: 24px;
+    width: 45px !important;
+    height: 50px !important;
+    right: -10px !important;
+    top: 0px !important;
+    background-color: #17181b;
+}
+
+.bm-cross-button span {
+    top: 9px !important;
+    right: 10px !important;
 }
 
 /* Color/shape of close button cross */
@@ -99,7 +107,7 @@
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-    fill: #373a47;
+    fill: #2c2d2f;
 }
 
 /* Wrapper for item list */
@@ -123,5 +131,11 @@
 
     .deskTop {
         display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .header_mobile {
+        display: block;
     }
 }

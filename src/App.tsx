@@ -10,15 +10,15 @@ export const App = () => {
     return (
         <>
             <div className={'app'} id={'app'}>
-                <div className={'header_mobile'}>
+                <header className={'header_mobile'}>
                     <h2>Anton Tolkachev</h2>
-                </div>
-                <header>
-                    <BurgerMenu pageWrapId={'wrapper'} outerContainerId={'app'}/>
-                    <div className={'deskTop'}>
-                        <Header/>
-                    </div>
                 </header>
+
+                <BurgerMenu pageWrapId={'wrapper'} outerContainerId={'app'}/>
+                <div className={'deskTop'}>
+                    <Header/>
+                </div>
+
                 <main className={'wrapper'} id={'wrapper'}>
                     <WhichRouters/>
                 </main>

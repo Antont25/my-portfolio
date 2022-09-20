@@ -34,6 +34,10 @@
     span {
       color: $second-color;
     }
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   .staticText {

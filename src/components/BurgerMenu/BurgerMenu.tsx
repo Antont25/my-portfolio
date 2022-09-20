@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {pushRotate as Menu} from 'react-burger-menu';
+import {slide as Menu} from 'react-burger-menu';
 import './burgerMenu.css'
 import {Header} from '../Header/Header';
 
@@ -16,7 +16,7 @@ export const BurgerMenu = (props: any) => {
     }
 
     return (
-        <Menu {...props} isOpen={isOpen} onStateChange={(state) => handleStateChange(state)} noOverlay>
+        <Menu {...props} isOpen={isOpen} onStateChange={(state) => handleStateChange(state)}>
             <Header setIsOpen={setIsOpenHandler}/>
         </Menu>
     );
