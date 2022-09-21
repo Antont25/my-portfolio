@@ -6,6 +6,7 @@ import {Button} from '../../common/components/Button/Button';
 import {ContactIcon} from '../Services/ContactIcon/ContactIcon';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
+import {Loading} from '../../common/components/Loading/Loading';
 
 
 export const Contact = () => {
@@ -92,10 +93,7 @@ export const Contact = () => {
                             <Button type={'submit'} name={'SEND'} disabled={loading || errors}/>
                         </div>
                     </form>
-                    {loading && <ReactLoading type={'balls'}
-                                              height={10}
-                                              width={56}
-                                              className={style.loading}/>}
+                    {loading && <Loading/>}
                     {isModalOpen &&
                         <div className={style.successfullySubmit}>Thank you, I will contact you shortly.</div>}
                 </div>
@@ -113,6 +111,8 @@ export const Contact = () => {
         </div>
     );
 };
+
+
 
 
 

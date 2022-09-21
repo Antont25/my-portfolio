@@ -6,9 +6,10 @@ import '../../app/App.scss'
 import 'animate.css';
 
 
-export const Home = () => {
+export const Home = (props: any) => {
+    const image = {backgroundImage: 'url(' + props.img + ')'}
     return (
-        <div className={style.homeBlock}>
+        <div className={style.homeBlock} style={image}>
             <h1 className={style.name}>ANTON <span>TOLKACHOV_</span></h1>
             <span className={style.staticText}>`I am `
                 <ReactTypingEffect

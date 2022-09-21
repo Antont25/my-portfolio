@@ -8,7 +8,7 @@ import {Contact} from '../../components/Contact/Contact';
 import {Skills} from '../../components/Skils/Skills';
 
 
-export const WhichRouters = () => {
+export const WhichRouters = (pro: any) => {
         const location = useLocation()
         const transitions = useTransition(location, {
             from: {opacity: 0, transform: 'translate3d(100%,0,0)'},
@@ -22,7 +22,7 @@ export const WhichRouters = () => {
                     transitions((props, item) => (
                             <animated.div style={{...props}}>
                                 <Routes location={item}>
-                                    <Route index element={<Home/>}/>
+                                    <Route index element={<Home img={pro.img}/>}/>
                                     <Route path={'about'} element={<AboutMe/>}/>
                                     <Route path={'/skills'} element={<Skills/>}/>
                                     <Route path={'/Portfolio'} element={<Portfolio/>}/>
