@@ -22,13 +22,15 @@ export const Portfolio = () => {
                 </PortfolioItem>
                 <PortfolioItem img={todo} title={'Todolist'}
                                href="https://antont25.github.io/todolist/"
-                               whatProject={'Self-edication project'}>
+                               whatProject={'Self-edication project'}
+                               isVPN={true}>
                     Stack: TypeScript, React, Redux Toolkit, Redux-thunk, Router-dom, Axios, Mui, Formik. Creating unit
                     tests, bug fixing, refactoring, deploying. Organizing correct app arcitecture.
                 </PortfolioItem>
                 <PortfolioItem img={social} title={'Social Network'}
                                href="https://antont25.github.io/social-network/"
-                               whatProject={'Self-edication project'}>
+                               whatProject={'Self-edication project'}
+                               isVPN={true}>
                     Stack: TypeScript, React, Redux, Redux-Thunk, React-Router-dom, Axios, Formikс, Creating unit tests,
                     bug fixing, deploying.
                 </PortfolioItem>

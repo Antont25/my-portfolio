@@ -8,7 +8,9 @@ export const PortfolioItem = (props: PortfolioItemParams) => {
                 <img src={props.img} alt={props.img}/>
                 <div className={style.infoBlock}>
                     <h3> {props.title}</h3>
-                    <span>{props.whatProject}</span>
+                    <span>{props.whatProject}
+                        {props.isVPN && <div className={style.VPNText}>You need a VPN to watch</div>}
+                    </span>
                     <p>{props.children}</p>
                 </div>
             </a>
@@ -22,4 +24,5 @@ type PortfolioItemParams = {
     title: string
     whatProject: string
     children: ReactNode
+    isVPN?: boolean
 };
