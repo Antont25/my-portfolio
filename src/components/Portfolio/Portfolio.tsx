@@ -15,32 +15,32 @@ export const Portfolio = () => {
             <NamePage name={'Portfolio.'} icon={'lnr lnr-briefcase'}/>
             <div className={style.myPortfolioBloc}>
                 <PortfolioItem img={cards} title={'Cards'}
-                               href="https://antont25.github.io/cards/"
+                               href="https://tolkachev-a.github.io/cards/"
                                whatProject={'Сommercial project'}>
                     Stack: TypeScript, React, Redux, Redux-Thunk, React-Router-dom, Axios, Formik. Organizing correct
                     app arcitecture. Team development: bug fixing, refactoring, deploying.
                 </PortfolioItem>
                 <PortfolioItem img={todo} title={'Todolist'}
-                               href="https://antont25.github.io/todolist/"
+                               href="https://tolkachev-a.github.io/todolist/"
                                whatProject={'Self-edication project'}
                                isVPN={true}>
                     Stack: TypeScript, React, Redux Toolkit, Redux-thunk, Router-dom, Axios, Mui, Formik. Creating unit
                     tests, bug fixing, refactoring, deploying. Organizing correct app arcitecture.
                 </PortfolioItem>
                 <PortfolioItem img={social} title={'Social Network'}
-                               href="https://antont25.github.io/social-network/"
+                               href="https://tolkachev-a.github.io/social-network/"
                                whatProject={'Self-edication project'}
                                isVPN={true}>
                     Stack: TypeScript, React, Redux, Redux-Thunk, React-Router-dom, Axios, Formikс, Creating unit tests,
                     bug fixing, deploying.
                 </PortfolioItem>
                 <PortfolioItem img={film} title={'Movie'}
-                               href="https://antont25.github.io/movie/"
+                               href="https://tolkachev-a.github.io/movie/"
                                whatProject={'Self-edication project'}>
                     Stack: TypeScript, React, Redux, Redux-Thunk, React-Router-dom, Axios. Deployin.
                 </PortfolioItem>
                 <PortfolioItem img={pizza} title={'Pizza'}
-                               href="https://antont25.github.io/magazin_pizza/"
+                               href="https://tolkachev-a.github.io/magazin_pizza/"
                                whatProject={'Self-edication project'}>
                     Stack: TypeScript, React, Redux, Redux-Thunk, React-Router-dom, Axios. Deployin.
                 </PortfolioItem>
